@@ -128,7 +128,7 @@ namespace PatikaCsharp
                 }
             }
 
-            SortArray(arr);
+            Array.Sort(arr);
 
             for (int i = 0; i < 3; i++)
             {
@@ -178,7 +178,7 @@ namespace PatikaCsharp
                 }
             }
             char[] cumledekiSesliHarfler = geciciList.ToArray();
-            SortArray(cumledekiSesliHarfler);
+            Array.Sort(cumledekiSesliHarfler);
             Console.Write("Cümledeki sesli harfler : ");
             foreach (char c in cumledekiSesliHarfler)
             {
@@ -186,39 +186,7 @@ namespace PatikaCsharp
             }
             #endregion
 
-
             Console.Read();
-
-        }
-
-        /// <summary>
-        /// Verilen arrayı küçükten büyüğe sıralar.
-        /// </summary>
-        /// <param name="arr"> Sıralanması istenilen Integer dizi </param>
-        public static void SortArray(int[] arr)
-        {
-            int counter = 0;
-            List<int> sortedList = arr.ToList();
-            sortedList.Sort();
-
-            foreach (int item in sortedList)
-            {
-                arr[counter] = item;
-                counter++;
-            }
-        }
-
-        public static void SortArray(char[] arr)
-        {
-            int counter = 0;
-            List<char> sortedList = arr.ToList();
-            sortedList.Sort();
-
-            foreach (char item in sortedList)
-            {
-                arr[counter] = item;
-                counter++;
-            }
         }
     }
 }
